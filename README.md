@@ -3,7 +3,7 @@
 Alumni directory is a website to allow alumni of an institute to search other's profiles. This project works alongside SAIL database collection drive.
 
 #### Installation
-The website runs on Python and Django with MySql database. Visit [MySql](http://www.mysql.com/downloads/) downloads page to install its latest version. Visit [Python](https://www.python.org/downloads/) downloads page to install version **2** of Python.
+The website runs on Python and Django with MySql database. Visit [MySql](http://www.mysql.com/downloads/) downloads page to install its latest version. Visit [Python](https://www.python.org/downloads/) downloads page to install version **2** of Python. In Linux-based systems, it requires to install `python-dev`. In Ubuntu, it can be done through apt-get package manager: `apt-get install python-dev`. In Fedora, it can be done through yum package manager: `yum install python-devel`.
 
 Django and other requirements can be installed using 'pip', a package manager for Python. To use pip, go to the project's folder to find requirements.txt and run the following command as administrator:
 
