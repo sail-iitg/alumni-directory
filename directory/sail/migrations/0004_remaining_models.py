@@ -7,7 +7,7 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('sail', '0001_initial'),
+        ('sail', '0003_rename_fields'),
     ]
 
     operations = [
@@ -24,10 +24,11 @@ class Migration(migrations.Migration):
             name='Education',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('degree', models.CharField(max_length=40, choices=[(b'btech', b'B.Tech.'), (b'mtech', b'M.Tech.'), (b'bdes', b'B.Des.'), (b'phd', b'Ph.D.'), (b'other', b'Other')])),
+                ('degree', models.CharField(max_length=40, choices=[(b'b', b'B.Tech.'), (b'm', b'M.Tech.'), (b'bd', b'B.Des.'), (b'p', b'Ph.D.'), (b'other', b'Other')])),
                 ('institute', models.CharField(max_length=100)),
-                ('start_year', models.IntegerField(null=True, choices=[(1994, 1994), (1995, 1995), (1996, 1996), (1997, 1997), (1998, 1998), (1999, 1999), (2000, 2000), (2001, 2001), (2002, 2002), (2003, 2003), (2004, 2004), (2005, 2005), (2006, 2006), (2007, 2007), (2008, 2008), (2009, 2009), (2010, 2010), (2011, 2011), (2012, 2012), (2013, 2013), (2014, 2014), (2015, 2015), (2016, 2016), (2017, 2017), (2018, 2018), (2019, 2019), (2020, 2020), (2021, 2021), (2022, 2022), (2023, 2023), (2024, 2024), (2025, 2025), (2026, 2026), (2027, 2027), (2028, 2028), (2029, 2029), (2030, 2030)])),
-                ('pass_out_year', models.IntegerField(null=True, choices=[(1996, 1996), (1997, 1997), (1998, 1998), (1999, 1999), (2000, 2000), (2001, 2001), (2002, 2002), (2003, 2003), (2004, 2004), (2005, 2005), (2006, 2006), (2007, 2007), (2008, 2008), (2009, 2009), (2010, 2010), (2011, 2011), (2012, 2012), (2013, 2013), (2014, 2014), (2015, 2015), (2016, 2016), (2017, 2017), (2018, 2018), (2019, 2019), (2020, 2020), (2021, 2021), (2022, 2022), (2023, 2023), (2024, 2024), (2025, 2025), (2026, 2026), (2027, 2027), (2028, 2028), (2029, 2029), (2030, 2030), (2031, 2031), (2032, 2032)])),
+                ('start_year', models.IntegerField(null=True)),
+                ('pass_out_year', models.IntegerField(null=True)),
+                ('department', models.CharField(max_length=50, null=True)),
                 ('specialization', models.CharField(max_length=50, null=True, blank=True)),
             ],
         ),
@@ -53,100 +54,6 @@ class Migration(migrations.Migration):
                 ('occupation', models.CharField(max_length=50, null=True, choices=[(b'scholar', b'Scholar'), (b'job', b'Job'), (b'startup', b'Startup/NGO'), (b'other', b'Other')])),
                 ('city', models.CharField(max_length=50, null=True)),
             ],
-        ),
-        migrations.RemoveField(
-            model_name='clubaffiliation',
-            name='alumnus_profile',
-        ),
-        migrations.RemoveField(
-            model_name='otherdegree',
-            name='alumnus_profile',
-        ),
-        migrations.RemoveField(
-            model_name='pastjob',
-            name='alumnus_profile',
-        ),
-        migrations.RenameField(
-            model_name='alumnusprofile',
-            old_name='email',
-            new_name='webmail',
-        ),
-        migrations.RemoveField(
-            model_name='alumnusprofile',
-            name='campus_involvements',
-        ),
-        migrations.RemoveField(
-            model_name='alumnusprofile',
-            name='commencement_year',
-        ),
-        migrations.RemoveField(
-            model_name='alumnusprofile',
-            name='degree',
-        ),
-        migrations.RemoveField(
-            model_name='alumnusprofile',
-            name='department',
-        ),
-        migrations.RemoveField(
-            model_name='alumnusprofile',
-            name='name_of_guide',
-        ),
-        migrations.RemoveField(
-            model_name='alumnusprofile',
-            name='pass_out_year',
-        ),
-        migrations.RemoveField(
-            model_name='alumnusprofile',
-            name='professional_affiliations',
-        ),
-        migrations.RemoveField(
-            model_name='alumnusprofile',
-            name='specialization',
-        ),
-        migrations.AddField(
-            model_name='alumnusprofile',
-            name='batch',
-            field=models.IntegerField(default=1),
-            preserve_default=False,
-        ),
-        migrations.AddField(
-            model_name='alumnusprofile',
-            name='facebook_link',
-            field=models.URLField(null=True, blank=True),
-        ),
-        migrations.AddField(
-            model_name='alumnusprofile',
-            name='github_link',
-            field=models.URLField(null=True, blank=True),
-        ),
-        migrations.AddField(
-            model_name='alumnusprofile',
-            name='google_link',
-            field=models.URLField(null=True, blank=True),
-        ),
-        migrations.AddField(
-            model_name='alumnusprofile',
-            name='twitter_link',
-            field=models.URLField(null=True, blank=True),
-        ),
-        migrations.AddField(
-            model_name='alumnusprofile',
-            name='videos_list',
-            field=models.TextField(null=True, blank=True),
-        ),
-        migrations.AlterField(
-            model_name='alumnusprofile',
-            name='current_job_description',
-            field=models.TextField(null=True, blank=True),
-        ),
-        migrations.DeleteModel(
-            name='ClubAffiliation',
-        ),
-        migrations.DeleteModel(
-            name='OtherDegree',
-        ),
-        migrations.DeleteModel(
-            name='PastJob',
         ),
         migrations.AddField(
             model_name='job',

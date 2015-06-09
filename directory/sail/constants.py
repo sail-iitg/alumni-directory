@@ -54,19 +54,20 @@ CLUBS = (
     ('other', 'Other'),
 )
 GENDERS = (
-    ('M', 'Male'),
-    ('F', 'Female'),
+    ('m', 'Male'),
+    ('f', 'Female'),
+    ('o', 'Other'),
 )
-DEGREES = (
-    ('btech', 'B.Tech.'),
-    ('mtech', 'M.Tech.'),
-    ('bdes', 'B.Des.'),
-    ('phd', 'Ph.D.'),
+PROGRAMS = (
+    ('b', 'B.Tech.'),
+    ('m', 'M.Tech.'),
+    ('bd', 'B.Des.'),
+    ('p', 'Ph.D.'),
     ('other', 'Other')
 )
 
 COMMENCMENT_YEARS = [(i+1994,i+1994) for i in range(37)]
-PASS_OUT_YEARS = [(i+1996,i+1996) for i in range(37)]
+PASS_OUT_YEARS = [(98,1998), (99,1999)] + [(i,i+2000) for i in range(21)]
 
 DEPARTMENTS = (
     ('bt', 'Biotechnology [BT]'),
@@ -84,6 +85,7 @@ DEPARTMENTS = (
     ('cfe', 'Centre for Energy'),
     ('cfte', 'Centre for the Environment'),
     ('cnt', 'Centre for Nanotechnology'),
+    ('o', 'Other'),
 )
 
 OCCUPATIONS = (
@@ -94,18 +96,18 @@ OCCUPATIONS = (
 )
 
 HOSTELS = (
-    ('barak', 'Barak'),
-    ('brahmaputra', 'Brahmaputra'),
-    ('dhansiri', 'Dhansiri'),
-    ('dibang', 'Dibang'),
-    ('dihing', 'Dihing'),
-    ('kameng', 'Kameng'),
-    ('kapili', 'Kapili'),
-    ('lohit', 'Lohit'),
-    ('manas', 'Manas'),
-    ('married', "Married Scholar's Hostel"),
-    ('siang', 'Siang'),
-    ('subansiri', 'Subansiri'),
-    ('umiam', 'Umiam'),
-    ('other', 'Other'),
+    ('Barak', 'Barak'),
+    ('Brahmaputra', 'Brahmaputra'),
+    ('Dhansiri', 'Dhansiri'),
+    ('Dibang', 'Dibang'),
+    ('Dihing', 'Dihing'),
+    ('Kameng', 'Kameng'),
+    ('Kapili', 'Kapili'),
+    ('Lohit', 'Lohit'),
+    ('Manas', 'Manas'),
+    ("Married Scholar's Hostel", "Married Scholar's Hostel"),
+    ('Siang', 'Siang'),
+    ('Subansiri', 'Subansiri'),
+    ('Umiam', 'Umiam'),
+    ('Other', 'Other'),
 )

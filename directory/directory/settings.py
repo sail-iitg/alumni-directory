@@ -105,3 +105,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Absolute path to .sql database for importing in initial migration
+PATH_TO_DATABASE_IMPORT = '/home/jayadeep/Downloads/sailDb.sql'
