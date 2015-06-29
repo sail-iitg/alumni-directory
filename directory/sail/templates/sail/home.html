@@ -7,5 +7,56 @@
 
 {% block main %}
 <!-- Actual page goes here -->
+<form action="/" method="POST">
+{% csrf_token %}
+<table>
+<tr>
+  <td>
+    <label>ID</label>
+  </td>
+  <td>
+    <input name="id_roll_number" type="number">
+    <input name="roll_number" type="radio" value="0" checked="checked">NULL
+    <input name="roll_number" type="radio" value="1">HAS
+    <input name="roll_number" type="radio" value="2">EXACT
+  </td>
+</tr>
+  <br>
+<tr>
+  <td>
+    <label>Name</label>
+  </td>
+  <td>
+    <input name="id_name" type="text">
+    <input name="name" type="radio" value="0" checked="checked">NULL
+    <input name="name" type="radio" value="1">HAS
+    <input name="name" type="radio" value="2">EXACT
+  </td>
+</tr>
+  <br>
+<tr>
+  <td>
+    <label>Gender</label>
+  </td>
+  <td>
+    <input type="radio" name="id_gender" value="m">Male<input type="radio" name="id_gender" value="f">Female
+    <input type="radio" name="gender" value="2" style="display:none">
+  </td>
+</tr>
+  <br>
+<tr>
+  <td>
+    <label>Batch</label>
+  </td>
+  <td>
+    <input name="id_batch" type="number">
+    <input name="batch" type="radio" value="0" checked="checked">NULL
+    <input name="batch" type="radio" value="1">HAS
+    <input name="batch" type="radio" value="2">EXACT
+  </td>
+</tr>
+</table>
+<input type="submit">
+</form>
 
 {% endblock %}

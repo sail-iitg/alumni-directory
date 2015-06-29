@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'directory.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME':'alumniDB',
+        'NAME':'alumnidb',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
@@ -107,4 +107,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Absolute path to .sql database for importing in initial migration
-PATH_TO_DATABASE_IMPORT = '/home/jayadeep/Downloads/sailDb.sql'
+# if COMPUTERNAME == 'RANKA47':
+#     PATH_TO_DATABASE_IMPORT = 'C:\\Users\\sumeet\\Downloads\\sailDb.sql'
+# else:
+#     PATH_TO_DATABASE_IMPORT = '/home/jayadeep/Downloads/sailDb.sql'
+PATH_TO_DATABASE_IMPORT = 'C:\\Users\\sumeet.ranka47\\Downloads\\sailDb.sql'
